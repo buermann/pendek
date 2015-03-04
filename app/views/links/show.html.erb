@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <% redirect_url = root_url + @link.id %>
+  The Pendek URL:
+
+  <p><%= redirect_url %>  
+
+  <p>will now redirect to 
+
+  <p><%= @link.url %>
+
+  <p><%= link_to 'Open in a new window', redirect_url, target: '_blank' %>
+
+</p>
+

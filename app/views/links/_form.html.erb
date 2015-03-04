@@ -1,0 +1,20 @@
+
+<%= form_for(@link, method: :post) do |f| %>
+  <% if @link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+      <ul>
+      <% @link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url, 'Enter the URL you want to shorten' %><br>
+    <%= f.text_field :url %>
+    <%= f.submit 'Shrink link', class: 'btn btn-primary btn-md' %>
+  </div>
+<% end %>
