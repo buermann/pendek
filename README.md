@@ -1,4 +1,4 @@
-== README
+# pendek
 
 Pendek: a dead simple base36 URL minifier-redirector. Named after the
 particularly short, cryptid sasquatch of Sumatra.
@@ -6,7 +6,7 @@ particularly short, cryptid sasquatch of Sumatra.
 Ruby 2.1.2 and rails 4.1.8.
 
 ```
-> git clone ... pendek
+> git clone https://github.com/buermann/pendek.git ./pendek
 > cd pendek
 > bundle install
 > bundle exec rake db:create db:migrate
@@ -17,4 +17,3 @@ Ruby 2.1.2 and rails 4.1.8.
 
 And browse to http://127.0.0.1:3000/
 
-# pendek
