@@ -26,8 +26,15 @@ describe LinksController, :type => :controller do
 
       get :show, params
 
-      response.should be_redirect
-      response.location.should == link.url
+      response.should redirect_to link.url
+    end
+
+    it "should redirect to home if there's no link" do
+      params[:id] = "this link id doesn't exist"
+
+      get :show, params
+    
+      response.should redirect_to "/"
     end
 
     it "should preview the link if using the preview route" do

@@ -3,9 +3,11 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-    @link = Link.find( params[:id].to_i(36) ) 
+    @link = Link.find_by_id( params[:id].to_i(36) ) 
 
-    if ( params[:preview] ) 
+    if ( !@link )
+      redirect_to root_path
+    elsif ( params[:preview] ) 
       # render
       render :show 
     else 
